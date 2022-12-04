@@ -33,10 +33,10 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   let isValidPilot = validateInput(pilot);
-   let isValidCopilot = validateInput(copilot);
-   let isValidFuelLevel = validateInput(fuelLevel);
-   let isValidCargoLevel = validateInput(cargoLevel);
+//    let isValidPilot = validateInput(pilot);
+//    let isValidCopilot = validateInput(copilot);
+//    let isValidFuelLevel = validateInput(fuelLevel);
+//    let isValidCargoLevel = validateInput(cargoLevel);
 
    let launchStatus = document.getElementById("launchStatus");
    let pilotStatus = document.getElementById("pilotStatus");
@@ -44,9 +44,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let fuelStatus = document.getElementById("fuelStatus");
    let cargoStatus = document.getElementById("cargoStatus");
    
-    if(isValidPilot === "Empty" || isValidCopilot === "Empty" || isValidFuelLevel === "Empty" || isValidCargoLevel === "Empty"){
+    if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty"){
         alert("All fields are required");
-    } else if(isValidPilot === "Is a Number" || isValidCopilot === "Is a Number" || isValidFuelLevel === "Not a Number" || isValidCargoLevel === "Not a Number"){
+    } else if(validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number"){
         alert("Please enter valid input for each field");
     } else {
         list.style.visibility = "visible";
