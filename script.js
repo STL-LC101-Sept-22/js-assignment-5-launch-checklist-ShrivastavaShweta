@@ -7,6 +7,7 @@ window.addEventListener("load", function() {
     const cargoMass = document.querySelector("input[name=cargoMass]");
     const launchForm = document.getElementById("launchForm");
     const list = document.getElementById("faultyItems");
+    list.style.visibility = 'hidden';
 
     launchForm.addEventListener("submit", function(event){ 
         event.preventDefault();
