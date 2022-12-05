@@ -80,10 +80,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
 async function myFetch() {
     let planetsReturned;
-
-    await fetch ("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
-        planetsReturned = response.json();
-    })
+    let response = await fetch("https://handlers.education.launchcode.org/static/planets.json");
+    planetsReturned = await response.json();
+    // await fetch ("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
+    //     planetsReturned = response.json();
+    // })
     // planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
     //     return response.json();
     //  });
